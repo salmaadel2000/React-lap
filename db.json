@@ -1,0 +1,40 @@
+{
+  "bags": [
+    {
+      "id": "1",
+      "brand": "salma",
+      "color": "Brown",
+      "price": 120
+    },
+    {
+      "id": "3",
+      "brand": "Brand C",
+      "color": "Blue",
+      "price": 90
+    },
+    {
+      "id": "69c5",
+      "brand": "ssss",
+      "color": "ssss",
+      "price": "20"
+    },
+    {
+      "id": "479f",
+      "brand": "Brand mariam",
+      "color": "ssss",
+      "price": "30"
+    },
+    {
+      "id": "5831",
+      "brand": "Brand acccccc",
+      "color": "ssss",
+      "price": "44"
+    },
+    {
+      "id": "6f27",
+      "brand": "gggggg",
+      "color": "ggggggg",
+      "price": "60"
+    }
+  ]
+}

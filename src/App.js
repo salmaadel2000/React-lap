@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import MyNavbar from './components/Navbar';
+import Footer from './components/Footer';
+import Bags from './components/Bags';
+import BagsDetails from './components/BagsDetails';
+import BagEdit from './components/BagEdit';
+import BagsForm from './components/Bagsform';
+import NotFound from './components/Notfound';
+import Mainlayout from './components/Mainlayout';
+import { getAll, getById } from './api/bagApi';
+import About from './components/About';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <>
+        <Mainlayout />
+        <Footer />
+      </>
+    ),
+    children: [
+      { path: 'about', element: <About />,activeIndex: true},
+      { path: 'bags', element: <Bags /> },
+      { path: 'bag/:id', element: <BagsDetails /> },
+      { path: 'bag/:id/edit', element: <BagEdit/> },
+      { path: 'add', element: <BagsForm /> },
+    ],
+  },
+  
+  { path: '*', element: <NotFound /> }
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
